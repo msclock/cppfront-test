@@ -1,0 +1,13 @@
+#include <vector>
+#include <span>
+#include <iostream>
+
+hello: (msg: std::string_view) = {
+    std::cout << "Hello, (msg)$!\n";
+}
+
+main: () = {
+    words: std::vector = ( "Alice", "Bob" );
+    hello( words[0] );
+    hello( words[1] );
+}
